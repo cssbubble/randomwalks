@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Walk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">  
+</head>
+<body class="bg-black text-[#ffc0fb] pb-20" style="font-family: 'Poppins', sans-serif;">
+    <header class="w-full lg:max-w-7xl mx-auto">
+        <nav class="flex justify-between items-center relative px-5 py-10">
+            <div class="flex justify-center items-center gap-4">
+                <img src="./images/dhimath.jpg" alt="dhimath" class="w-16 h-auto rounded-full">
+                <h1 class="text-4xl tracking-wider" style="font-family: 'Chewy', cursive;">Random Walks</h1>
+            </div>
+            <div class="md:hidden " x-data="{ isOpen : false}">
+                <button @click="isOpen = !isOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" x-show="!isOpen">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" x-show="isOpen">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                </button>
+                <div class="flex flex-col absolute right-0 mt-5 px-5 gap-5" x-show="isOpen">
+                    <button>Subscribe now</button>
+                    <a href="#">Join us</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hidden md:flex justify-center items-center gap-5">
+                <button class="px-4 py-2 bg-gray-900 rounded-lg">Subscribe now</button>
+                <a href="#" class="underline underline-offset-2">Join us</a>
+                <a href="#" class="underline underline-offset-2">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main class="w-full lg:max-w-7xl mx-auto sm:px-5" >
+        <div style="background-image: url('./images/impose.png');" class="bg-cover text-indigo-900 flex flex-col justify-between items-center py-10 ">
+            <h2 class="text-2xl">Dhimath <br> Presents</h2>
+            <p class="text-5xl md:text-9xl py-20 tracking-wider text-center" style="font-family: 'Chewy', cursive;">Random Walks</p>
+            <p>Monthly Math Magazine</p>
+        </div>
+
+        <div class="text-white bg-gray-900 py-10">
+            <div class="p-5 flex flex-col md:flex-row md:justify-center md:items-start mx-auto max-w-4xl">
+                <p class="text-xl col-span-1">A fun math magazine</p>
+                <div class="md:ml-5 mt-5 md:mt-0">
+                    <p class="text-2xl italic underline underline-offset-4 decoration-dotted">-by Math enthusiasts</p>
+                    <p class="text-2xl italic underline underline-offset-4 decoration-dotted mt-3">-for Everyone</p>
+                </div>    
+            </div>
+            
+            <div class="md:grid md:grid-cols-4 justify-items-center mx-auto mt-10 md:px-5">
+                <div class="rounded-lg overflow-hidden">
+                    <img src="./images/kids-mother-playing.png" alt="problem solving" class="col-span-1 object-cover">
+                </div>
+                
+                <div class="col-span-2 text-left text-xl mt-5 p-5 md:py-0 md:mt-0">
+                    <p>The only entry fee is:</p>
+                    <div class="text-2xl italic">
+                        <p class="mt-5">-Enthusiasm...</p>
+                        <p class="mt-5">-Curiosity...</p>
+                        <p class="mt-5">-Passion...</p>
+                    </div>    
+                </div>
+                <section class="col-span-1 text-center mt-10 p-5 md:py-0 md:mt-0">
+                    <h3 class="text-[#ffcofb] text-xl underline">A Fun Math Newsletter</h3>
+                    <div class="flex justify-center mt-3">
+                        <iframe class="border border-4 border-purple-500 aspect-w-16 aspect-h-9" src="https://www.youtube.com/embed/nxirpEZlsQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div>    
+                </section>
+            </div>
+        </div>
+        
+        <section class="bg-pink-500 p-5">
+            <h3 class="text-xl underline" style="font-family: 'Chewy', cursive;">For whom?</h3>
+            <p class="text-black text-[#312egb] mt-5">Asking this question is like asking what age group or what profession should a person be in to practice yoga or meditation! The earlier you inculcate these habits, the better it is for your physical and mental health. Similarly, engaging with the puzzles and comics from the newsletter will serve as a BRAIN WORKOUT for you. </p>
+        </section>
+
+        <section class="text-white bg-gray-900 py-10 sm:px-5">
+            <h3 class="sr-only">images</h3>
+            <div class="grid sm:grid-cols-2 md:justify-items-center gap-5">
+                <div class="flex justify-center">
+                    <video src="short-video.mp4"></video>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img class="object-cover w-48 h-48 rounded-lg" src="images/woman-learning.png" alt="woman-learning">
+                    <img class="object-cover w-48 h-48 rounded-lg" src="images/mother-daughter-learning.png" alt="mother-daughter-learning">
+                    <img class="object-cover w-48 h-48 rounded-lg" src="images/kids-mother-playing.png" alt="kids-mother-playing">
+                    <img class="object-cover w-48 h-48 rounded-lg" src="images/old-man-learning.png" alt="old-man-learning">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
