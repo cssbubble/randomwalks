@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">  
 </head>
 <body class="bg-black text-[#ffc0fb] pb-20" style="font-family: 'Poppins', sans-serif;">
-    <header class="w-full lg:max-w-7xl mx-auto">
+    <header class="w-full lg:max-w-7xl mx-auto px-5 ">
         <nav class="flex justify-between items-center relative px-5 py-10">
             <div class="flex justify-center items-center gap-4">
                 <img src="./images/dhimath.jpg" alt="dhimath" class="w-16 h-auto rounded-full">
@@ -27,14 +27,14 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                       </svg>
                 </button>
-                <div class="flex flex-col absolute right-0 mt-5 px-5 gap-5" x-show="isOpen">
-                    <button>Subscribe now</button>
+                <div class="flex flex-col absolute right-0 mt-5 p-5 gap-5 bg-black" x-show="isOpen">
+                    <button style="font-family: 'Chewy', cursive;" class="px-4 py-2 bg-pink-200 hover:bg-pink-500 text-black rounded-lg">Subscribe now</button>
                     <a href="#">Join us</a>
                     <a href="#">Contact</a>
                 </div>
             </div>
             <div class="hidden md:flex justify-center items-center gap-5">
-                <button class="px-4 py-2 bg-gray-900 rounded-lg">Subscribe now</button>
+                <button class="px-4 py-2 bg-pink-200 hover:bg-pink-500 text-black font-bold rounded-lg" style="font-family: 'Chewy', cursive;">Subscribe now</button>
                 <a href="#" class="underline underline-offset-2">Join us</a>
                 <a href="#" class="underline underline-offset-2">Contact</a>
             </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="text-white bg-gray-900 py-10">
-            <div class="p-5 flex flex-col md:flex-row md:justify-center md:items-start mx-auto max-w-4xl">
+            <div class="p-5 flex flex-col items-center md:flex-row md:justify-center md:items-start mx-auto max-w-4xl">
                 <p class="text-xl col-span-1">A fun math magazine</p>
                 <div class="md:ml-5 mt-5 md:mt-0">
                     <p class="text-2xl italic underline underline-offset-4 decoration-dotted">-by Math enthusiasts</p>
@@ -56,12 +56,12 @@
                 </div>    
             </div>
             
-            <div class="md:grid md:grid-cols-4 justify-items-center mx-auto mt-10 md:px-5">
-                <div class="rounded-lg overflow-hidden">
+            <div class="grid lg:grid-cols-3 justify-items-center mx-auto mt-10 md:px-5 max-w-2xl lg:max-w-7xl">
+                <div class=" overflow-hidden">
                     <img src="./images/kids-mother-playing.png" alt="problem solving" class="col-span-1 object-cover">
                 </div>
                 
-                <div class="col-span-2 text-left text-xl mt-5 p-5 md:py-0 md:mt-0">
+                <div class=" mt-5 lg:mt-0 text-left text-xl mt-5 p-5 py-5 md:py-">
                     <p>The only entry fee is:</p>
                     <div class="text-2xl italic">
                         <p class="mt-5">-Enthusiasm...</p>
@@ -69,10 +69,10 @@
                         <p class="mt-5">-Passion...</p>
                     </div>    
                 </div>
-                <section class="col-span-1 text-center mt-10 p-5 md:py-0 md:mt-0">
-                    <h3 class="text-[#ffcofb] text-xl underline">A Fun Math Newsletter</h3>
-                    <div class="flex justify-center mt-3">
-                        <iframe class="border border-4 border-purple-500 aspect-w-16 aspect-h-9" src="https://www.youtube.com/embed/nxirpEZlsQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                <section class="text-center p-5 md:py-0 md:mt-0 w-full h-full">
+                    <!-- <h3 class="text-[#ffcofb] text-xl underline">A Fun Math Newsletter</h3> -->
+                    <div class="flex justify-center mt-3 md:mt-0 border border-4 border-purple-500 h-full w-full">
+                        <iframe class="aspect-w-16 aspect-h-9" src="https://www.youtube.com/embed/nxirpEZlsQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                     </div>    
                 </section>
             </div>
@@ -80,16 +80,20 @@
         
         <section class="bg-pink-500 p-5">
             <h3 class="text-xl underline" style="font-family: 'Chewy', cursive;">For whom?</h3>
-            <p class="text-black text-[#312egb] mt-5">Asking this question is like asking what age group or what profession should a person be in to practice yoga or meditation! The earlier you inculcate these habits, the better it is for your physical and mental health. Similarly, engaging with the puzzles and comics from the newsletter will serve as a BRAIN WORKOUT for you. </p>
+            <p class="text-black mt-5">Asking this question is like asking what age group or what profession should a person be in to practice yoga or meditation! The earlier you inculcate these habits, the better it is for your physical and mental health. Similarly, engaging with the puzzles and comics from the newsletter will serve as a BRAIN WORKOUT for you. </p>
         </section>
 
         <section class="text-white bg-gray-900 py-10 sm:px-5">
             <h3 class="sr-only">images</h3>
-            <div class="grid sm:grid-cols-2 md:justify-items-center gap-5">
-                <div class="flex justify-center">
-                    <video src="short-video.mp4"></video>
+            <div class="grid sm:grid-cols-2 md:justify-items-center gap-5 px-5">
+                <div class="flex justify-center mt-3 md:mt-0 border border-4 border-purple-500 h-full w-full">
+                    <video width="320" height="240"  autoplay>
+                        <source src="short-video.mp4" type="video/mp4">
+                        <source src="short-video.webm" type="video/webm">
+                      Your browser does not support the video tag.
+                      </video> 
                 </div>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4 justify-items-center">
                     <img class="object-cover w-48 h-48 rounded-lg" src="images/woman-learning.png" alt="woman-learning">
                     <img class="object-cover w-48 h-48 rounded-lg" src="images/mother-daughter-learning.png" alt="mother-daughter-learning">
                     <img class="object-cover w-48 h-48 rounded-lg" src="images/kids-mother-playing.png" alt="kids-mother-playing">
@@ -97,7 +101,37 @@
                 </div>
             </div>
         </section>
+        <section class="bg-pink-500 p-5">
+            <h3 class="text-xl underline uppercase" style="font-family: 'Chewy', cursive;">how to engage?</h3>
+            <div class=" text-black mt-5">
+                <p>If you are a person who loves solving puzzles on their own, you just need pen and a paper! That's how easy it is to get started.</p>
+                <p class="mt-3">You can also share this with your friends and family, and challenge them or play the games together.</p>
+                <p class="mt-3">Research has shown that friends and family that play and enjoy together share a bonding stronger and richer compared to otherwise.</p>
+                <p class="mt-3">Call your brother or sister or cousins and have fun solving and reading the newsletter.</p>
+            </div>
+            
+        </section>
+
+        <section class="text-white bg-gray-900 py-10 sm:px-5">
+            <h3 class="sr-only">action</h3>
+            <div class="text-center">
+                <button class="px-4 py-2 bg-pink-200 text-black font-bold rounded-lg" style="font-family: 'Chewy', cursive;">Subscribe now</button>
+                <div class="grid md:grid-cols-3 mt-10 justify-items-center items-center">
+                    <p class="text-[#ffc0fb] text-xl px-5 font-bold">Submit your solution and get featured in the Magazine</p>
+                    <img src="images/magazine.png" alt="magazine" class="w-60 object-cover rounded-lg mt-10 lg:mt-0">
+                    <p class="text-[#ffc0fb] text-xl px-5 font-bold mt-10 lg:mt-0">Inspire the world with your engagements in Math</p>
+                </div>   
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="w-full lg:max-w-7xl mx-auto sm:px-5">
+        <div class="max-w-7xl mx-auto py-20  bg-pink-500 text-black">
+            <div class="max-w-2xl flex justify-center items-center gap-5 mx-auto">
+                <a href="#"><img class="w-12 h-12" src="images/twitter.svg" alt="twitter"></a>
+                <a href="#"><img class="w-12 h-12" src="images/instagram.svg" alt="instagram"></a>
+                <a href="#"><img class="w-12 h-12" src="images/facebook.svg" alt="facebook"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
